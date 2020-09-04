@@ -7,7 +7,7 @@
  */
 static char *font = "Fantasque Sans Mono:size=17";
 static char *font2[] = { "Fantasque Sans Mono:size=17" };
-static int borderpx = 8;
+static int borderpx = 16;
 
 /*
  * What program is execed by st depends of these precedence rules:
