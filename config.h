@@ -112,28 +112,28 @@ float alpha = 0.45;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#2f2f2f", /* hard contrast: #1d2021 / soft contrast: #32302f */
-  "#d75f5f",
-	"#c3e88d",
-	"#ffcb6b",
-	"#82aaff",
-	"#775759",
-	"#84edb9",
-	"#c0b18b",
-	"#555555",
-	"#d75f5f",
-	"#9ece58",
-	"#faed70",
-	"#396fe2",
-	"#775759",
-	"#84edb9",
-	"#d8d8d8",
+  "#3b4252", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#88c0d0", /* cyan    */
+	"#e5e9f0", /* white   */
+  "#4c566a", /* black   */
+	"#bf616a", /* red     */
+	"#a3be8c", /* green   */
+	"#ebcb8b", /* yellow  */
+	"#81a1c1", /* blue    */
+	"#b48ead", /* magenta */
+	"#8fbcbb", /* cyan    */
+	"#eceff4", /* white   */
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
 	"#555555", /* 257 -> rev cursor*/
-	"#282828", /* 258 -> bg */
-	"#ebdbb2", /* 259 -> fg */
+	"#2e3440", /* 258 -> bg */
+	"#d8dee9", /* 259 -> fg */
 };
 
 
@@ -143,7 +143,7 @@ static const char *colorname[] = {
  */
 unsigned int defaultfg = 259;
 unsigned int defaultbg = 258;
-unsigned int defaultcs = 256;
+unsigned int defaultcs = 257;
 unsigned int defaultrcs = 257;
 
 /*
