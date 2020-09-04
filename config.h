@@ -7,7 +7,7 @@
  */
 static char *font = "Fantasque Sans Mono:size=17";
 static char *font2[] = { "Fantasque Sans Mono:size=17" };
-static int borderpx = 2;
+static int borderpx = 8;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -17,7 +17,7 @@ static int borderpx = 2;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/zsh";
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
@@ -108,26 +108,26 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.8;
+float alpha = 0.45;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
-	"#cc241d",
-	"#98971a",
-	"#d79921",
-	"#458588",
-	"#b16286",
-	"#689d6a",
-	"#a89984",
-	"#928374",
-	"#fb4934",
-	"#b8bb26",
-	"#fabd2f",
-	"#83a598",
-	"#d3869b",
-	"#8ec07c",
-	"#ebdbb2",
+	"#2f2f2f", /* hard contrast: #1d2021 / soft contrast: #32302f */
+  "#d75f5f",
+	"#c3e88d",
+	"#ffcb6b",
+	"#82aaff",
+	"#775759",
+	"#84edb9",
+	"#c0b18b",
+	"#555555",
+	"#d75f5f",
+	"#9ece58",
+	"#faed70",
+	"#396fe2",
+	"#775759",
+	"#84edb9",
+	"#d8d8d8",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
 	"#add8e6", /* 256 -> cursor */
@@ -179,37 +179,37 @@ static unsigned int defaultattr = 11;
  * Xresources preferences to load at startup
  */
 ResourcePref resources[] = {
-		{ "font",         STRING,  &font },
-		{ "fontalt0",     STRING,  &font2[0] },
-		{ "color0",       STRING,  &colorname[0] },
-		{ "color1",       STRING,  &colorname[1] },
-		{ "color2",       STRING,  &colorname[2] },
-		{ "color3",       STRING,  &colorname[3] },
-		{ "color4",       STRING,  &colorname[4] },
-		{ "color5",       STRING,  &colorname[5] },
-		{ "color6",       STRING,  &colorname[6] },
-		{ "color7",       STRING,  &colorname[7] },
-		{ "color8",       STRING,  &colorname[8] },
-		{ "color9",       STRING,  &colorname[9] },
-		{ "color10",      STRING,  &colorname[10] },
-		{ "color11",      STRING,  &colorname[11] },
-		{ "color12",      STRING,  &colorname[12] },
-		{ "color13",      STRING,  &colorname[13] },
-		{ "color14",      STRING,  &colorname[14] },
-		{ "color15",      STRING,  &colorname[15] },
-		{ "background",   STRING,  &colorname[258] },
-		{ "foreground",   STRING,  &colorname[259] },
-		{ "cursorColor",  STRING,  &colorname[256] },
-		{ "termname",     STRING,  &termname },
-		{ "shell",        STRING,  &shell },
-		{ "blinktimeout", INTEGER, &blinktimeout },
-		{ "bellvolume",   INTEGER, &bellvolume },
-		{ "tabspaces",    INTEGER, &tabspaces },
-		{ "borderpx",     INTEGER, &borderpx },
-		{ "cwscale",      FLOAT,   &cwscale },
-		{ "chscale",      FLOAT,   &chscale },
+		{ "3font",         STRING,  &font },
+		{ "3fontalt0",     STRING,  &font2[0] },
+		{ "3color0",       STRING,  &colorname[0] },
+		{ "3color1",       STRING,  &colorname[1] },
+		{ "33color2",       STRING,  &colorname[2] },
+		{ "3color3",       STRING,  &colorname[3] },
+		{ "33color4",       STRING,  &colorname[4] },
+		{ "3color5",       STRING,  &colorname[5] },
+		{ "33color6",       STRING,  &colorname[6] },
+		{ "3color7",       STRING,  &colorname[7] },
+		{ "3color8",       STRING,  &colorname[8] },
+		{ "3color9",       STRING,  &colorname[9] },
+		{ "33color10",      STRING,  &colorname[10] },
+		{ "3color11",      STRING,  &colorname[11] },
+		{ "33color12",      STRING,  &colorname[12] },
+		{ "3color13",      STRING,  &colorname[13] },
+		{ "33color14",      STRING,  &colorname[14] },
+		{ "3color15",      STRING,  &colorname[15] },
+		{ "33background",   STRING,  &colorname[258] },
+		{ "3foreground",   STRING,  &colorname[259] },
+		{ "3cursorColor",  STRING,  &colorname[256] },
+		{ "3termname",     STRING,  &termname },
+		{ "3shell",        STRING,  &shell },
+		{ "3blinktimeout", INTEGER, &blinktimeout },
+		{ "3bellvolume",   INTEGER, &bellvolume },
+		{ "3tabspaces",    INTEGER, &tabspaces },
+		{ "3borderpx",     INTEGER, &borderpx },
+		{ "3cwscale",      FLOAT,   &cwscale },
+		{ "3chscale",      FLOAT,   &chscale },
 		{ "alpha",        FLOAT,   &alpha },
-		{ "ximspot_update_interval", INTEGER, &ximspot_update_interval },
+		{ "3ximspot_update_interval", INTEGER, &ximspot_update_interval },
 };
 
 /*
